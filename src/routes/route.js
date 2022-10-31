@@ -14,10 +14,10 @@ router.post("/register", userController.registerUser);
 router.get("/user", middleware.authentication, userController.getUsers);
 
 //Api for updating books by bookId in path params
-router.put("/books/:bookId",middleware.authentication,middleware.authorisation,bookController.updateBook);
+router.put("/user/:phone", middleware.authentication, middleware.authorisation, userController.updateUser);
 
 //Api for deleting books by bookId in path params
-router.delete("/books/:bookId",middleware.authentication,middleware.authorisation,bookController.deleteBook);
+router.delete("/user/:phone", middleware.authentication, middleware.authorisation, userController.deleteUser);
 
 
 // if api is invalid OR wrong URL

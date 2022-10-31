@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 mongoose.connect("mongodb+srv://Group14:bblpiY3Xmnxx6dQH@cluster0.2huqa.mongodb.net/group14Database?retryWrites=true&w=majority", {
         useNewUrlParser: true
     })
-    .then((result) => console.log("Hii!, Anjali your MongoDb is connected"))
+    .then((result) => console.log("Hii!, Abhishek your MongoDb is connected"))
     .catch((err) => console.log(err))
 
 
@@ -25,5 +25,3 @@ app.use('/', route)
 app.listen(process.env.PORT || 3000, function () {
     console.log('Express app running on port ' + (process.env.PORT || 3000))
 });
-
-//mongodb+srv://AnjaliSrivastava:e5YgmiAmxGsiLRwp@cluster0.i6luj.mongodb.net/BookManagement?retryWrites=true&w=majority
