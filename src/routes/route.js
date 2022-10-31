@@ -10,13 +10,13 @@ const middleware = require("../middleware/auth");
 //Api for creating user
 router.post("/register", userController.registerUser);
 
-//Api for getting books by query params
+//Api for getting user by query params
 router.get("/user", middleware.authentication, userController.getUsers);
 
-//Api for updating books by bookId in path params
-router.put("/user/:phone", middleware.authentication, middleware.authorisation, userController.updateUser);
+//Api for updating user by name in path params
+router.put("/user/:name", middleware.authentication, middleware.authorisation, userController.updateUser);
 
-//Api for deleting books by bookId in path params
+//Api for deleting phone by phone in path params
 router.delete("/user/:phone", middleware.authentication, middleware.authorisation, userController.deleteUser);
 
 
