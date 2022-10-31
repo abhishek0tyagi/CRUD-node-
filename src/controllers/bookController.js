@@ -18,14 +18,9 @@ const createBook = async function (req, res) {
     const data = req.body;
 
     const {
-      title,
-      excerpt,
-      userId,
-      ISBN,
-      category,
-      subcategory,
+     
       isDeleted,
-      releasedAt,
+      
     } = data;
 
     // VALIDATIONS:
