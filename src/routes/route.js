@@ -11,13 +11,13 @@ const middleware = require("../middleware/auth");
 router.post("/register", userController.registerUser);
 
 //Api for getting user by query params
-router.get("/user", middleware.authentication, userController.getUsers);
+router.get("/user",  userController.getUsers);
 
 //Api for updating user by name in path params
-router.put("/user/:name", middleware.authentication, middleware.authorisation, userController.updateUser);
+router.put("/user/:name",   userController.updateUser);
 
 //Api for deleting phone by phone in path params
-router.delete("/user/:phone", middleware.authentication, middleware.authorisation, userController.deleteUser);
+router.delete("/user/:phone",  userController.deleteUser);
 
 
 // if api is invalid OR wrong URL
